@@ -13,7 +13,7 @@ exports.index = async (req, res) => {
 //Show
 exports.show = async (req, res) => {
   const { id } = req.params;
-  const data = await Book.query().findById(id);
+  const data = await Book.query().findById(id).$relatedQuery("genre");
 
   if (!data) {
     return res.status(300).send("No such a book)");
