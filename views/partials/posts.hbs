@@ -1,0 +1,27 @@
+<section class="ftco-section">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 text-center">
+						<h2 class="heading-section mb-3 text-gray">Bestseller Books from <strong class="text-primary">BookShelf</strong></h2>
+					</div>
+					<div class="col-md-12">
+						<div class="featured-carousel owl-carousel">
+                            {{#each posts}}
+							<div class="item">
+								<div class="work">
+                                  <a href="/books/{{this.id}}">
+                                    <div class="img d-flex align-items-end justify-content-center" style="background-image: url({{this.image}});">
+										<div class="text w-100">
+											<span class="cat">{{this.genre}}</span>
+											<h3><small>by </small> {{this.author}}</h3>
+										</div>
+									</div>
+                                 </a>
+								</div>
+							</div>
+                            {{/each}}
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
